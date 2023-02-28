@@ -1,5 +1,7 @@
 package com.irmak.mynews
 
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -32,8 +34,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val newsCard13 = NewsCard5.newInstance("par1", "par2")
         val newsCard14 = NewsCard4.newInstance("par1", "par2")
         val newsCard15 = NewsCard3.newInstance("par1", "par2")
+        val newsCard16 = NewsCard5.newInstance("par1", "par2")
 
-         newsCardDetail = NewsDetailFragment.newInstance("par1", "par2")
+
+        newsCardDetail = NewsDetailFragment.newInstance("par1", "par2")
 
         addFragment(newsCard1, R.id.newsCard1)
         addFragment(newsCard2, R.id.newsCard2)
@@ -50,6 +54,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         addFragment(newsCard13, R.id.newsCard13)
         addFragment(newsCard14, R.id.newsCard14)
         addFragment(newsCard15, R.id.newsCard15)
+        addFragment(newsCard16, R.id.newsCard16)
+
 
         findViewById<FrameLayout>(R.id.newsCard1).setOnClickListener(this)
         findViewById<FrameLayout>(R.id.newsCard2).setOnClickListener(this)
@@ -66,6 +72,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<FrameLayout>(R.id.newsCard13).setOnClickListener(this)
         findViewById<FrameLayout>(R.id.newsCard14).setOnClickListener(this)
         findViewById<FrameLayout>(R.id.newsCard15).setOnClickListener(this)
+        findViewById<FrameLayout>(R.id.newsCard16).setOnClickListener(this)
+
 
         list.add(Pair(newsCard1, R.id.newsCard1))
         list.add(Pair(newsCard2, R.id.newsCard2))
@@ -82,19 +90,24 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         list.add(Pair(newsCard13, R.id.newsCard13))
         list.add(Pair(newsCard14, R.id.newsCard14))
         list.add(Pair(newsCard15, R.id.newsCard15))
+        list.add(Pair(newsCard16, R.id.newsCard16))
 
 
 
 
 
     }
+
+
     override fun onClick(frameLayoutId: View?) {
         for (pair in list) {
             if (pair.second == frameLayoutId?.id){
                 selectedFrameLayoutId = frameLayoutId.id
-                openDetailFragment(newsCardDetail, frameLayoutId.id)
+            val intent = Intent(this,DetailActivity::class.java)
+                startActivity(intent)
             }else {
-                removeFragment(pair.first)
+              //  openDetailFragment(newsCardDetail,R.id.screen)
+                //removeFragment(pair.first)
             }
         }
     }
@@ -117,7 +130,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             if (pair.second == selectedFrameLayoutId) {
                 openDetailFragment(pair.first, pair.second)
             }else{
-                addFragment(pair.first, pair.second)
+                //addFragment(pair.first, pair.second)
             }
         }
     }

@@ -1,95 +1,498 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    
+    android:background="@color/mainBg"
+    tools:context=".MainActivity"
+    tools:ignore="SpeakableTextPresentCheck">
+
+
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/screen"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <FrameLayout
             android:id="@+id/newsCardDetail"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content"
+            android:background="@color/black" />
 
-        <FrameLayout
-            android:id="@+id/newsCard1"
+
+        <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="4">
 
-        <FrameLayout
-            android:id="@+id/newsCard2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="300dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
 
-        <FrameLayout
-            android:id="@+id/newsCard3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/cardview_dark_background"
+                    android:orientation="vertical" />
 
-        <FrameLayout
-            android:id="@+id/newsCard4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newsone" />
 
-        <FrameLayout
-            android:id="@+id/newsCard5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+                <FrameLayout
+                    android:id="@+id/newsCard1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-        <FrameLayout
-            android:id="@+id/newsCard6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
 
-        <FrameLayout
-            android:id="@+id/newsCard7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="175dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
 
-        <FrameLayout
-            android:id="@+id/newsCard8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/cardview_dark_background"
+                    android:orientation="vertical" />
 
-        <FrameLayout
-            android:id="@+id/newsCard9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newsfive" />
 
-        <FrameLayout
-            android:id="@+id/newsCard10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+                <FrameLayout
+                    android:id="@+id/newsCard2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-        <FrameLayout
-            android:id="@+id/newsCard11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
 
-        <FrameLayout
-            android:id="@+id/newsCard12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="140dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
 
-        <FrameLayout
-            android:id="@+id/newsCard13"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/cardview_dark_background"
+                    android:orientation="vertical" />
 
-        <FrameLayout
-            android:id="@+id/newsCard14"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newsone" />
 
-        <FrameLayout
-            android:id="@+id/newsCard15"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+                <FrameLayout
+                    android:id="@+id/newsCard3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="275dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-120dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:background="@color/cardview_dark_background"
+                    android:orientation="vertical" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newstwo" />
+
+                <FrameLayout
+                    android:id="@+id/newsCard4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="350dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/cardview_dark_background"
+                    android:orientation="vertical" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newsthree" />
+
+
+                <FrameLayout
+                    android:id="@+id/newsCard5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="275dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/cardview_dark_background"
+                    android:orientation="vertical" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newsfour" />
+
+                <FrameLayout
+                    android:id="@+id/newsCard6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="350dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/cardview_dark_background"
+                    android:orientation="vertical" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newssİx" />
+
+                <FrameLayout
+                    android:id="@+id/newsCard7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="380dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-60dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/cardview_dark_background"
+                    android:orientation="vertical" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newseight" />
+
+                <FrameLayout
+                    android:id="@+id/newsCard8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="400dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/cardview_dark_background"
+                    android:orientation="vertical" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newsnine" />
+
+                <FrameLayout
+                    android:id="@+id/newsCard9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="275dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-30dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/cardview_dark_background"
+                    android:orientation="vertical" />
+
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newsten" />
+
+                <FrameLayout
+                    android:id="@+id/newsCard10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="250dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/cardview_dark_background"
+                    android:orientation="vertical" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newstwel" />
+
+                <FrameLayout
+                    android:id="@+id/newsCard11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="220dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-160dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/cardview_dark_background"
+                    android:orientation="vertical" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newseleven" />
+
+                <FrameLayout
+                    android:id="@+id/newsCard12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="250dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/cardview_dark_background"
+                    android:orientation="vertical" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newsforty" />
+
+
+                <FrameLayout
+                    android:id="@+id/newsCard13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="300dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-190dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/cardview_dark_background"
+                    android:orientation="vertical" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newsthirt" />
+
+                <FrameLayout
+                    android:id="@+id/newsCard14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="250dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/cardview_dark_background"
+                    android:orientation="vertical" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newssİxjpg" />
+
+
+                <FrameLayout
+                    android:id="@+id/newsCard15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="400dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-140dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/cardview_dark_background"
+                    android:orientation="vertical" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newsfivty" />
+
+                <FrameLayout
+                    android:id="@+id/newsCard16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
 
     </LinearLayout>
 
